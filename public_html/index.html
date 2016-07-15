@@ -9,29 +9,35 @@
         <link rel="stylesheet" href="css/main.css">
         <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
-        <script type="text/javascript" src="rps2.js"></script>
+        <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+        <script type="text/javascript" src="js/rps2.js"></script>
     </head>
     
     <body>
         
         <div class="btnContainer">
             
-            <div class="button noselect" id="rockbtn">
+            <div class="button noselect" id="rockbtn" onCLick="userClick(this.id)">
                 <i class="fa fa-hand-rock-o fa-5x" aria-hidden="true"> <p id="btntext"> ROCK </p> </i>
             </div>  
             
-            <div class="button noselect" id="scissorsbtn">
+            <div class="button noselect" id="scissorsbtn" onCLick="userClick(this.id)">
                 <i class="fa fa-scissors fa-5x"> <p id="btntext"> SCISSORS </p> </i>
             </div>
        
         
-            <div class="button noselect" id="paperbtn">
+            <div class="button noselect" id="paperbtn" onCLick="userClick(this.id)">
                 <i class="fa fa-file-text-o fa-5x"> <p id="btntext"> PAPER </p> </i>
             </div>
-        
+            
             
         </div>
     
+        
+        <p>User:</p><p id="userAnswer"></p><br>
+        <p>AI:</p><p id="aiAnswer"></p><br>
+        <p>RESULT:</p><p id="result"></p>
+        
     </body>
 
 </html>
