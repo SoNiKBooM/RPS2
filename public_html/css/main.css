@@ -52,3 +52,33 @@
   user-select: none;           /* Non-prefixed version, currently
                                   not supported by any browser */
 }
+
+
+.scoreboard {
+    border: 1px solid red;
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.score {
+    border: 1px solid;
+    margin: 10px;
+    width: 30%;
+    text-align: center;
+    display: inline-block;
+}
+.score p {
+    
+    
+    }
+    
+    .scoreboard #user {
+        width: 30%;
+        margin: 0 auto;
+    }
+    
+    .scoreboard #ai {
+        width: 30%;
+        margin: 0 auto;
+    }

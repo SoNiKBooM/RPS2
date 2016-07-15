@@ -1,8 +1,14 @@
 
 var rps = ["rock","paper","scissors"]; //global variable to minjs a bit
 
-//gets a random number and picks from 3 choices
-function aiMath() { 
+//global counter variables
+var rcount = 0;
+var pcount = 0;
+var scount = 0;
+var tcount = 0; //tie count
+var total = 0;
+
+function aiMath() { //gets a random number and picks from 3 choices
     randNum = Math.random();
     if (randNum <= 0.33) {
         return rps[0];
@@ -40,35 +46,49 @@ function compare(choice1, choice2) {
     //tie:
     if (choice1 === choice2) {
         document.getElementById('result').innerHTML = "TIE!";
+        tcount++;
+        total++;
     }
     
-    //rock vs 
+    //rock vs paper else
     else if (choice1 === rps[0]) {
         if (choice2 === rps[1]) {
             document.getElementById('result').innerHTML = "AI WINS!";
+            pcount++;
+            total++;
         }
         else {
             document.getElementById('result').innerHTML = "USER WINS!";
+            rcount++;
+            total++;
         }
     }
     
-    //paper vs
+    //paper vs rock else
     else if (choice1 === rps[1]) {
         if (choice2 === rps[0]) {
             document.getElementById('result').innerHTML = "USER WINS!";
+            pcount++;
+            total++;
         }
         else {
             document.getElementById('result').innerHTML = "AI WINS!";
+            rcount++;
+            total++;
         }
     }
     
-    //scissors vs
+    //scissors vs rock else
     else if (choice1 === rps[2]) {
         if (choice2 === rps[0]) {
             document.getElementById('result').innerHTML = "AI WINS!";
+            scount++;
+            total++;            
         }
         else {
             document.getElementById('result').innerHTML = "USER WINS!";
+            rcount++;
+            total++;
         }
     }
 }
