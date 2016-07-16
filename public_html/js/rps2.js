@@ -36,7 +36,11 @@ function userClick(idClick) {
     aiChoice = aiMath();
     document.getElementById('aiAnswer').innerHTML = aiChoice;
     document.getElementById('userAnswer').innerHTML = userChoice;
+    document.getElementById("tie").style.backgroundColor = "lightblue";
+    document.getElementById("user").style.backgroundColor = "white";
+    document.getElementById("ai").style.backgroundColor = "white";
     compare(userChoice, aiChoice);
+    
     };
 
 
@@ -48,6 +52,11 @@ function compare(choice1, choice2) {
         document.getElementById('result').innerHTML = "TIE!";
         tcount++;
         total++;
+        document.getElementById("total").innerHTML = total;
+        document.getElementById("tcount").innerHTML = tcount;
+        document.getElementById("tie").style.backgroundColor = "green";
+        document.getElementById("user").style.backgroundColor = "red";
+        document.getElementById("ai").style.backgroundColor = "red";
     }
     
     //rock vs paper else
@@ -56,11 +65,17 @@ function compare(choice1, choice2) {
             document.getElementById('result').innerHTML = "AI WINS!";
             pcount++;
             total++;
+            document.getElementById("total").innerHTML = total;
+            document.getElementById("ai").style.backgroundColor = "green";
+            document.getElementById("user").style.backgroundColor = "red";
         }
         else {
             document.getElementById('result').innerHTML = "USER WINS!";
             rcount++;
             total++;
+            document.getElementById("total").innerHTML = total;
+            document.getElementById("user").style.backgroundColor = "green";
+            document.getElementById("ai").style.backgroundColor = "red";
         }
     }
     
@@ -70,11 +85,17 @@ function compare(choice1, choice2) {
             document.getElementById('result').innerHTML = "USER WINS!";
             pcount++;
             total++;
+            document.getElementById("total").innerHTML = total;
+            document.getElementById("user").style.backgroundColor = "green";
+            document.getElementById("ai").style.backgroundColor = "red";
         }
         else {
             document.getElementById('result').innerHTML = "AI WINS!";
             rcount++;
             total++;
+            document.getElementById("total").innerHTML = total;
+            document.getElementById("ai").style.backgroundColor = "green";
+            document.getElementById("user").style.backgroundColor = "red";
         }
     }
     
@@ -84,12 +105,19 @@ function compare(choice1, choice2) {
             document.getElementById('result').innerHTML = "AI WINS!";
             scount++;
             total++;            
+            document.getElementById("total").innerHTML = total;
+            document.getElementById("ai").style.backgroundColor = "green";
+            document.getElementById("user").style.backgroundColor = "red";
         }
         else {
             document.getElementById('result').innerHTML = "USER WINS!";
             rcount++;
             total++;
+            document.getElementById("total").innerHTML = total;
+            document.getElementById("user").style.backgroundColor = "green";
+            document.getElementById("ai").style.backgroundColor = "red";
         }
+        
     }
 }
 
