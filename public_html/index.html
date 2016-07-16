@@ -18,30 +18,45 @@
         <div class="btnContainer">
             
             <div class="button noselect" id="rockbtn" onCLick="userClick(this.id)">
-                <i class="fa fa-hand-rock-o fa-5x" aria-hidden="true"> <p id="btntext"> ROCK </p> </i>
+                <i class="fa fa-hand-rock-o"> </i>
+                <p id="btntext"> ROCK </p> 
             </div>  
             
             <div class="button noselect" id="scissorsbtn" onCLick="userClick(this.id)">
-                <i class="fa fa-scissors fa-5x"> <p id="btntext"> SCISSORS </p> </i>
+                <i class="fa fa-scissors"></i> 
+                <p id="btntext"> SCISSORS </p> 
             </div>
        
         
             <div class="button noselect" id="paperbtn" onCLick="userClick(this.id)">
-                <i class="fa fa-file-text-o fa-5x"> <p id="btntext"> PAPER </p> </i>
+                <i class="fa fa-file-text-o"></i>
+                <p id="btntext"> PAPER </p> 
             </div>
+        
+        </div>  
             
-            
-        </div>
+        
     
         <div class="scoreboard">
             
-        <div class="score" id="user"><p>User:</p><p id="userAnswer">CLICK AN OPTION TO START</p></div>
-        <div class="score" id="tie"><p>Tie:</p><p id="tcount">0</p></div>
-        <div class="score" id="ai"><p>AI:</p><p id="aiAnswer">&nbsp;</p></div>
-        <div class="score"><p>TOTAL:</p><p id="total"></p></div>
-        <div class="score"><p>RESULT:</p><p id="result"></p></div>
+        <div class="score" id="user"><p id="userAnswer">0</p></div>
+        <div class="score" id="ai"><p id="aiAnswer">0</p></div>
+        
+        
+        
+        
         
         </div>
+        
+        <div class="results">
+              
+        <div class="score"><p id="arrows">-</p></div>
+        <div class="score"><p id="result">&nbsp;</p></div>
+        <div class="score" id="tie"><p id="tcount">0</p><p id="tietext">DRAWS</p></div>
+        <div class="score"><p id="total">&nbsp</p></div>
+        
+        </div>
+        
         
     </body>
 

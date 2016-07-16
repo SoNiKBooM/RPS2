@@ -2,11 +2,13 @@
 var rps = ["rock","paper","scissors"]; //global variable to minjs a bit
 
 //global counter variables
-var rcount = 0;
-var pcount = 0;
-var scount = 0;
+var rcount = 0; //rock count
+var pcount = 0; //paper count
+var scount = 0;// scissors count
+var ucount = 0; //user count
+var acount = 0; //ai count
 var tcount = 0; //tie count
-var total = 0;
+var total = 0; //total count
 
 function aiMath() { //gets a random number and picks from 3 choices
     randNum = Math.random();
@@ -33,12 +35,12 @@ function userClick(idClick) {
     else {
         userChoice = rps[2];
     }
+    
     aiChoice = aiMath();
-    document.getElementById('aiAnswer').innerHTML = aiChoice;
-    document.getElementById('userAnswer').innerHTML = userChoice;
-    document.getElementById("tie").style.backgroundColor = "lightblue";
-    document.getElementById("user").style.backgroundColor = "white";
-    document.getElementById("ai").style.backgroundColor = "white";
+    
+    document.getElementById('aiAnswer').innerHTML = acount;
+    document.getElementById('userAnswer').innerHTML = ucount;
+        
     compare(userChoice, aiChoice);
     
     };
@@ -54,68 +56,83 @@ function compare(choice1, choice2) {
         total++;
         document.getElementById("total").innerHTML = total;
         document.getElementById("tcount").innerHTML = tcount;
-        document.getElementById("tie").style.backgroundColor = "green";
-        document.getElementById("user").style.backgroundColor = "red";
-        document.getElementById("ai").style.backgroundColor = "red";
+        document.getElementById("arrows").innerHTML = "-";
+        if(tcount === 0) {
+            document.getElementById("tietext").innerHTML = "DRAWS";
+        }
+        else if (tcount > 0 && tcount < 2)  {
+            document.getElementById("tietext").innerHTML = "DRAW";
+        }
+        else{    
+            document.getElementById("tietext").innerHTML = "DRAWS";
+            }
+        
+           
     }
     
     //rock vs paper else
     else if (choice1 === rps[0]) {
         if (choice2 === rps[1]) {
-            document.getElementById('result').innerHTML = "AI WINS!";
+            document.getElementById('result').innerHTML = "AI WINS WITH "+choice2.toUpperCase();
             pcount++;
+            acount++
             total++;
             document.getElementById("total").innerHTML = total;
-            document.getElementById("ai").style.backgroundColor = "green";
-            document.getElementById("user").style.backgroundColor = "red";
+            document.getElementById("arrows").innerHTML = ">"
+            
         }
         else {
-            document.getElementById('result').innerHTML = "USER WINS!";
+            document.getElementById('result').innerHTML = "YOU WIN WITH "+choice1.toUpperCase();
+            ucount++;
             rcount++;
             total++;
             document.getElementById("total").innerHTML = total;
-            document.getElementById("user").style.backgroundColor = "green";
-            document.getElementById("ai").style.backgroundColor = "red";
+            document.getElementById("arrows").innerHTML = "<"
+            
         }
     }
     
     //paper vs rock else
     else if (choice1 === rps[1]) {
         if (choice2 === rps[0]) {
-            document.getElementById('result').innerHTML = "USER WINS!";
+            document.getElementById('result').innerHTML = "YOU WIN WITH "+choice1.toUpperCase();
+            ucount++;
             pcount++;
             total++;
             document.getElementById("total").innerHTML = total;
-            document.getElementById("user").style.backgroundColor = "green";
-            document.getElementById("ai").style.backgroundColor = "red";
+            document.getElementById("arrows").innerHTML = "<"
+            
         }
         else {
-            document.getElementById('result').innerHTML = "AI WINS!";
+            document.getElementById('result').innerHTML = "AI WINS WITH "+choice2.toUpperCase();
+            acount++;
             rcount++;
             total++;
             document.getElementById("total").innerHTML = total;
-            document.getElementById("ai").style.backgroundColor = "green";
-            document.getElementById("user").style.backgroundColor = "red";
+            document.getElementById("arrows").innerHTML = ">"
+           
         }
     }
     
     //scissors vs rock else
     else if (choice1 === rps[2]) {
         if (choice2 === rps[0]) {
-            document.getElementById('result').innerHTML = "AI WINS!";
+            document.getElementById('result').innerHTML = "AI WINS WITH "+choice2.toUpperCase();
+            acount++;
             scount++;
             total++;            
             document.getElementById("total").innerHTML = total;
-            document.getElementById("ai").style.backgroundColor = "green";
-            document.getElementById("user").style.backgroundColor = "red";
+            document.getElementById("arrows").innerHTML = ">"
+           
         }
         else {
-            document.getElementById('result').innerHTML = "USER WINS!";
+            document.getElementById('result').innerHTML = "YOU WIN WITH "+choice1.toUpperCase();
+            ucount++;
             rcount++;
             total++;
             document.getElementById("total").innerHTML = total;
-            document.getElementById("user").style.backgroundColor = "green";
-            document.getElementById("ai").style.backgroundColor = "red";
+            document.getElementById("arrows").innerHTML = "<"
+           
         }
         
     }

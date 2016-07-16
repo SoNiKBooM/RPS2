@@ -7,40 +7,10 @@
 /*
 */
 
-.button {
-    
-    border: solid 1px;
-    border-radius: 10px;
-    margin: 0 auto;
-    padding-top: 20px;
-    text-align: center;
-    cursor: pointer;
-    width: 32%;
-    
-}
-
-.btnContainer #rockbtn {
-    float: left;
-}
-
-.btnContainer #scissorsbtn {
-    float: right;
-}
-
-.btnContainer #paperbtn {
-    margin: 0 auto;
-    
-    
-}
-
-.button p {
-    font-family: 'Oswald', sans-serif;
-    font-size: .7em;
-}
-
-.button:hover {
-    background-color: green;
-    color: white;
+/*GENERIC STYLES*/
+body {
+    height: 100%;
+    background: grey;
 }
 
 .noselect {
@@ -52,33 +22,149 @@
   user-select: none;           /* Non-prefixed version, currently
                                   not supported by any browser */
 }
+/*END GENERIC STYLES*/
 
+/*BUTTONS*/
+    /*CONTAINER*/
+.btnContainer {    
+    border-radius: 10px;
+    }
 
-.scoreboard {
-    border: 1px solid red;
-    margin-top: 10px;
-    border-radius: 5px;
-    width: 100%;
-}
+    .btnContainer #rockbtn {
+        float: left;
+    }
 
-.score {
-    border: 1px solid;
-    margin: 10px;
-    width: 30%;
+    .btnContainer #scissorsbtn {
+        float: right;
+    }
+
+    .btnContainer #paperbtn {
+        margin: 0 auto;
+    }
+    /*END CONTAINER*/
+    
+    /*BUTTON*/
+.button {    
+    border: solid 1px;
+    border-radius: 10px;
+    background-color: lightgrey;
+    margin: 0 auto;
+    padding-top: 20px;
     text-align: center;
-    display: inline-block;
+    cursor: pointer;
+    width: 32%;
 }
-.score p {
-    
-    
+
+    .button i { /*font-awesome font size*/
+        font-size: 8em;
     }
     
+    .button p {
+    font-family: 'Oswald', sans-serif;
+    font-size: 5em;
+    }
+
+    .button:hover {
+        background-color: green;
+        color: white;
+    }
+
+    .button #btntext {
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+    /*END BUTTON*/
+
+/*END BUTTONS*/
+
+
+
+/*SCOREBOARD*/
+.scoreboard {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding: 20px 20px 0 20px;
+    
+    
+}
+
+    .scoreboard .score {
+        border: 0.1px solid white; 
+        border-radius: 1px;
+        text-align: center;
+    }
+
     .scoreboard #user {
         width: 30%;
-        margin: 0 auto;
+        background-color: #669ACC;
+        float: left;
+        font-size: 6em;
     }
-    
+
     .scoreboard #ai {
         width: 30%;
-        margin: 0 auto;
+        background-color: #CC3333;
+        float: right;
+        font-size: 6em;
+
     }
+/*END SCOREBOARD*/
+
+/*RESULTS*/
+.results #arrows {
+    background-color: white;
+    border-radius: 30%;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 4.5em;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 5%;
+}
+
+    .results #tie {
+        border: 1px solid white; 
+        border-top: 0px;
+        border-radius: 0px 0px 5px 5px;
+        width: 30%;
+        background-color: #CC9933;
+        margin: 0 auto 0 auto;
+        text-align: center;
+        padding: 2px;
+        
+        }
+        
+        .results #tie p {
+            margin: 0;
+            font-size: 3em;
+        }
+        
+        .results .score #result {
+            border: 0.1px solid white; 
+            border-radius: 5px;
+            text-align: center;
+            font-size: 3.5em;
+            margin: 0 auto;
+            text-align: center;
+            width: 50%;
+        }
+        
+        .results .score #total {
+            border: 1px solid white; 
+            border-top: 0px;
+            border-radius: 5px;
+            width: 30%;
+            background-color: #99CC33;
+            margin: 0 auto 0 auto;
+            margin-top: 5px;
+            text-align: center;
+            padding: 2px;
+            font-size: 4.5em;
+        }
+/*END RESULTS*/
+    
+    
+    
+    
+    
