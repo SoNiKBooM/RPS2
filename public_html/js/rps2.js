@@ -38,11 +38,12 @@ function userClick(idClick) {
     
     aiChoice = aiMath();
     
-    document.getElementById('aiAnswer').innerHTML = acount;
-    document.getElementById('userAnswer').innerHTML = ucount;
+    
         
     compare(userChoice, aiChoice);
     
+    document.getElementById('aiAnswer').innerHTML = acount;
+    document.getElementById('userAnswer').innerHTML = ucount;
     };
 
 
@@ -51,20 +52,20 @@ function compare(choice1, choice2) {
     
     //tie:
     if (choice1 === choice2) {
-        document.getElementById('result').innerHTML = "TIE!";
+        document.getElementById('result').innerHTML = "DRAW!";
         tcount++;
         total++;
         document.getElementById("total").innerHTML = total;
         document.getElementById("tcount").innerHTML = tcount;
-        document.getElementById("arrows").innerHTML = "-";
+        document.getElementById("arrows").innerHTML = "&#8615;";
         if(tcount === 0) {
-            document.getElementById("tietext").innerHTML = "DRAWS";
+            document.getElementById("tietext").innerHTML = "DRAWN";
         }
         else if (tcount > 0 && tcount < 2)  {
             document.getElementById("tietext").innerHTML = "DRAW";
         }
         else{    
-            document.getElementById("tietext").innerHTML = "DRAWS";
+            document.getElementById("tietext").innerHTML = "DRAWN";
             }
         
            
@@ -78,7 +79,7 @@ function compare(choice1, choice2) {
             acount++
             total++;
             document.getElementById("total").innerHTML = total;
-            document.getElementById("arrows").innerHTML = ">"
+            document.getElementById("arrows").innerHTML = "&#8618;"
             
         }
         else {
@@ -87,7 +88,7 @@ function compare(choice1, choice2) {
             rcount++;
             total++;
             document.getElementById("total").innerHTML = total;
-            document.getElementById("arrows").innerHTML = "<"
+            document.getElementById("arrows").innerHTML = "&#8617;"
             
         }
     }
@@ -100,7 +101,7 @@ function compare(choice1, choice2) {
             pcount++;
             total++;
             document.getElementById("total").innerHTML = total;
-            document.getElementById("arrows").innerHTML = "<"
+            document.getElementById("arrows").innerHTML = "&#8617;"
             
         }
         else {
@@ -109,7 +110,7 @@ function compare(choice1, choice2) {
             rcount++;
             total++;
             document.getElementById("total").innerHTML = total;
-            document.getElementById("arrows").innerHTML = ">"
+            document.getElementById("arrows").innerHTML = "&#8618;"
            
         }
     }
@@ -122,7 +123,7 @@ function compare(choice1, choice2) {
             scount++;
             total++;            
             document.getElementById("total").innerHTML = total;
-            document.getElementById("arrows").innerHTML = ">"
+            document.getElementById("arrows").innerHTML = "&#8618;"
            
         }
         else {
@@ -131,7 +132,7 @@ function compare(choice1, choice2) {
             rcount++;
             total++;
             document.getElementById("total").innerHTML = total;
-            document.getElementById("arrows").innerHTML = "<"
+            document.getElementById("arrows").innerHTML = "&#8617;"
            
         }
         
