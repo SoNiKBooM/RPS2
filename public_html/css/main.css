@@ -179,7 +179,15 @@ body {
         }
 /*END RESULTS*/
     
-    
-    
-    
+.sig {
+    margin: 0;
+    text-align: center;
+    font-size: 1em;
+}
+
+.sig p {
+    margin: 0;
+    margin-top: 5px;
+}
+  
     
