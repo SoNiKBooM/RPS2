@@ -21,7 +21,7 @@ function aiMath() { //gets a random number and picks from 3 choices
     else {
         return rps[2];
     }
-    };
+    }
 
 
 //for returning the id of the clicked element
@@ -44,7 +44,7 @@ function userClick(idClick) {
     
     document.getElementById('aiAnswer').innerHTML = acount;
     document.getElementById('userAnswer').innerHTML = ucount;
-    };
+    }
 
 
 //compare function
@@ -76,10 +76,10 @@ function compare(choice1, choice2) {
         if (choice2 === rps[1]) {
             document.getElementById('result').innerHTML = "AI WINS WITH "+choice2.toUpperCase();
             pcount++;
-            acount++
+            acount++;
             total++;
             document.getElementById("total").innerHTML = total;
-            document.getElementById("arrows").innerHTML = "&#8618;"
+            document.getElementById("arrows").innerHTML = "&#8618;";
             
         }
         else {
@@ -88,7 +88,7 @@ function compare(choice1, choice2) {
             rcount++;
             total++;
             document.getElementById("total").innerHTML = total;
-            document.getElementById("arrows").innerHTML = "&#8617;"
+            document.getElementById("arrows").innerHTML = "&#8617;";
             
         }
     }
@@ -101,7 +101,7 @@ function compare(choice1, choice2) {
             pcount++;
             total++;
             document.getElementById("total").innerHTML = total;
-            document.getElementById("arrows").innerHTML = "&#8617;"
+            document.getElementById("arrows").innerHTML = "&#8617;";
             
         }
         else {
@@ -110,7 +110,7 @@ function compare(choice1, choice2) {
             rcount++;
             total++;
             document.getElementById("total").innerHTML = total;
-            document.getElementById("arrows").innerHTML = "&#8618;"
+            document.getElementById("arrows").innerHTML = "&#8618;";
            
         }
     }
@@ -123,7 +123,7 @@ function compare(choice1, choice2) {
             scount++;
             total++;            
             document.getElementById("total").innerHTML = total;
-            document.getElementById("arrows").innerHTML = "&#8618;"
+            document.getElementById("arrows").innerHTML = "&#8618;";
            
         }
         else {
@@ -132,7 +132,7 @@ function compare(choice1, choice2) {
             rcount++;
             total++;
             document.getElementById("total").innerHTML = total;
-            document.getElementById("arrows").innerHTML = "&#8617;"
+            document.getElementById("arrows").innerHTML = "&#8617;";
            
         }
         
