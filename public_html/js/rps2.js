@@ -21,7 +21,7 @@ function aiMath() { //gets a random number and picks from 3 choices
     else {
         return rps[2];
     }
-    }
+}
 
 
 //for returning the id of the clicked element
@@ -36,9 +36,7 @@ function userClick(idClick) {
         userChoice = rps[2];
     }
     
-    aiChoice = aiMath();
-    
-    
+    aiChoice = aiMath();    
         
     compare(userChoice, aiChoice);
     
@@ -80,8 +78,6 @@ function compare(choice1, choice2) {
         else{    
             document.getElementById("tietext").innerHTML = "DRAWN";
             }
-        
-           
     }
     
     //rock vs paper else
@@ -124,7 +120,6 @@ function compare(choice1, choice2) {
             total++;
             userWin();           
         }
-        
     }
 }
 
