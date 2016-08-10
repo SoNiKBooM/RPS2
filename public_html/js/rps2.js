@@ -21,7 +21,7 @@ function aiMath() { //gets a random number and picks from 3 choices
     else {
         return rps[2];
     }
-    }
+}
 
 
 //for returning the id of the clicked element
@@ -36,9 +36,7 @@ function userClick(idClick) {
         userChoice = rps[2];
     }
     
-    aiChoice = aiMath();
-    
-    
+    aiChoice = aiMath();    
         
     compare(userChoice, aiChoice);
     
@@ -46,6 +44,19 @@ function userClick(idClick) {
     document.getElementById('userAnswer').innerHTML = ucount;
     }
 
+function userWin() {
+    document.getElementById('result').innerHTML = "YOU WIN WITH "+userChoice.toUpperCase();
+    ucount++;
+    document.getElementById("total").innerHTML = total;
+    document.getElementById("arrows").innerHTML = "&#8617;";
+    }
+
+function aiWin() {
+    document.getElementById('result').innerHTML = "AI WINS WITH "+aiChoice.toUpperCase();
+    acount++;
+    document.getElementById("total").innerHTML = total;
+    document.getElementById("arrows").innerHTML = "&#8618;";
+    }  
 
 //compare function
 function compare(choice1, choice2) {
@@ -67,75 +78,48 @@ function compare(choice1, choice2) {
         else{    
             document.getElementById("tietext").innerHTML = "DRAWN";
             }
-        
-           
     }
     
     //rock vs paper else
     else if (choice1 === rps[0]) {
         if (choice2 === rps[1]) {
-            document.getElementById('result').innerHTML = "AI WINS WITH "+choice2.toUpperCase();
-            pcount++;
-            acount++;
+            pcount++;            
             total++;
-            document.getElementById("total").innerHTML = total;
-            document.getElementById("arrows").innerHTML = "&#8618;";
-            
+            aiWin();           
         }
         else {
-            document.getElementById('result').innerHTML = "YOU WIN WITH "+choice1.toUpperCase();
-            ucount++;
             rcount++;
             total++;
-            document.getElementById("total").innerHTML = total;
-            document.getElementById("arrows").innerHTML = "&#8617;";
-            
+            userWin();
         }
     }
     
     //paper vs rock else
     else if (choice1 === rps[1]) {
         if (choice2 === rps[0]) {
-            document.getElementById('result').innerHTML = "YOU WIN WITH "+choice1.toUpperCase();
-            ucount++;
             pcount++;
             total++;
-            document.getElementById("total").innerHTML = total;
-            document.getElementById("arrows").innerHTML = "&#8617;";
-            
+            userWin()
         }
         else {
-            document.getElementById('result').innerHTML = "AI WINS WITH "+choice2.toUpperCase();
-            acount++;
             rcount++;
             total++;
-            document.getElementById("total").innerHTML = total;
-            document.getElementById("arrows").innerHTML = "&#8618;";
-           
+            aiWin();          
         }
     }
     
     //scissors vs rock else
     else if (choice1 === rps[2]) {
         if (choice2 === rps[0]) {
-            document.getElementById('result').innerHTML = "AI WINS WITH "+choice2.toUpperCase();
-            acount++;
             scount++;
             total++;            
-            document.getElementById("total").innerHTML = total;
-            document.getElementById("arrows").innerHTML = "&#8618;";
-           
+            aiWin();           
         }
         else {
-            document.getElementById('result').innerHTML = "YOU WIN WITH "+choice1.toUpperCase();
-            ucount++;
             rcount++;
             total++;
-            document.getElementById("total").innerHTML = total;
-            document.getElementById("arrows").innerHTML = "&#8617;";
-           
+            userWin();           
         }
-        
     }
 }
 
